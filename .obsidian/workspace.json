@@ -1,0 +1,195 @@
+{
+  "main": {
+    "id": "11b968ce01ebcd44",
+    "type": "split",
+    "children": [
+      {
+        "id": "5c9276f6101a6ac7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2d00f9fa4baf566f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notas Web3/Consenso.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Consenso"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "10b2166fb9180dff",
+    "type": "split",
+    "children": [
+      {
+        "id": "f189b2505caec60d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2db6a234c9846a1d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "808d02facd377c1a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "56e18aa0a3ef397d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 209.5
+  },
+  "right": {
+    "id": "b8898503e23ba901",
+    "type": "split",
+    "children": [
+      {
+        "id": "96902fe4ca43b669",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dc0334fab38a9479",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Notas Web3/Consenso.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de Consenso"
+            }
+          },
+          {
+            "id": "413bc44b33948998",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Sin título.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de Sin título"
+            }
+          },
+          {
+            "id": "928abb05cc72162b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "aa182bd3c8b314fd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Sin título.canvas",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de Sin título"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "2d00f9fa4baf566f",
+  "lastOpenFiles": [
+    "Notas Web3/Gas.md",
+    "Notas Web3/Keys.md",
+    "Notas Web3/Solidity.md",
+    "Notas Web3/Transacción.md",
+    "Notas Web3/Web3.md",
+    "Notas Web3/Consenso.md",
+    "Notas Web3/Blockchain.md",
+    "Gas.md",
+    "Web3.md",
+    "Solidity.md",
+    "Transacción.md",
+    "Blockchain.md",
+    "Consenso.md",
+    "Keys.md",
+    "2025-03-11.md",
+    "Sin título.canvas",
+    "Notas Web3",
+    "Notas Web3",
+    "cree un enlace.md",
+    "Bienvenido.md",
+    "2025-03-08.md"
+  ]
+}
