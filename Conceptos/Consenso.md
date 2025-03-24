@@ -13,11 +13,9 @@ En **Proof of Work**, los participantes (mineros) compiten para resolver proble
 
 Por otro lado, en **Proof of Stake**, los validadores son seleccionados para proponer bloques en función de la cantidad de tokens que han "apostado" (**stake**) en la red. En lugar de competir con poder computacional, la probabilidad de ser seleccionado depende de la participación económica. Si un nodo se comporta como no es debido puede perder todo lo apostado. Este mecanismo es más eficiente energéticamente y escalable, pero puede llevar a cierta centralización si unos pocos validadores acumulan muchos tokens. Ethereum, después de su transición a Ethereum 2.0, es un ejemplo destacado de **PoS**.
 
-
 ## **Sybil Resistance y Sybil Attack**
 
 La **Sybil Resistance** es la capacidad de una red para resistir **Sybil Attacks**, donde un atacante crea múltiples identidades falsas para ganar control sobre esta. En **PoW**, la **Sybil Resistance** se logra mediante el alto costo computacional de minar bloques, lo que hace que crear múltiples identidades sea económicamente inviable. En **PoS**, se logra mediante el requisito de apostar tokens, lo que hace que crear múltiples identidades sea costoso en términos económicos. Sin una buena resistencia Sybil, una red sería vulnerable a la manipulación por parte de un atacante.
-
 
 ### **51% Attack**
 

@@ -2,7 +2,7 @@
 
 Web3 es un concepto que describe la evolución de Internet hacia una red descentralizada basada en **blockchain** y tecnologías afines. Su objetivo es proporcionar una web más abierta, segura y sin intermediarios, donde los usuarios tienen mayor control sobre sus datos e identidades digitales.
 
-## **Principales características de Web3:**
+## **Principales características de Web3**
 
 - **Descentralización:** En lugar de depender de servidores centralizados (como en Web2), Web3 se basa en redes distribuidas como **Ethereum, Solana o Polkadot**.
 
@@ -16,7 +16,7 @@ Web3 es un concepto que describe la evolución de Internet hacia una red descent
 
 - **Organizaciones Autónomas Descentralizadas (DAOs):** Comunidades que toman decisiones colectivas a través de contratos inteligentes.
 
-## **Ejemplos de aplicaciones Web3:**
+## **Ejemplos de aplicaciones Web3**
 
 - **DeFi (Finanzas Descentralizadas):** Plataformas como Uniswap o Aave que permiten intercambios y préstamos sin bancos.
 - **NFTs y arte digital:** Mercados como OpenSea o Blur donde los artistas pueden vender obras únicas sin intermediarios.

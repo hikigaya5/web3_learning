@@ -1,0 +1,1 @@
+En Solidity, el **constructor** es una función especial que se ejecuta **una única vez** durante el despliegue del contrato en la blockchain. Su objetivo principal es inicializar el estado del contrato (variables de estado, configuraciones iniciales, permisos, etc.).
