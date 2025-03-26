@@ -1,4 +1,3 @@
-# **¿Qué es una transacción?**
 
 En el mundo de **blockchain**, una **transacción** es una operación registrada en la cadena de bloques que involucra el **envío, recepción o ejecución de datos** sin necesidad de intermediarios. Puede ser desde una simple transferencia de criptomonedas hasta la ejecución de **smart contracts**.
 

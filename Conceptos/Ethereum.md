@@ -1,4 +1,3 @@
-# **¿Qué es Ethereum?**
 
 **Ethereum** es una plataforma de **blockchain descentralizada y de código abierto** diseñada para permitir la creación y ejecución de **smart contracts** y **aplicaciones descentralizadas**. A diferencia de Bitcoin, que se centra en ser un sistema de dinero digital, Ethereum es una red programable que amplía las posibilidades de la tecnología blockchain más allá de las transacciones financieras. El **Ether (ETH)** es la criptomoneda de Ethereum, utilizada para pagar las tarifas de transacción (**gas fees**) y recompensar a los validadores.
 

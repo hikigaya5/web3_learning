@@ -2,7 +2,7 @@
 string public mensaje;
 uint256 public contador;
 ```
-### Tipos básicos
+### **Tipos básicos**
 
 - **Enteros**:
     
@@ -45,7 +45,7 @@ uint256 public contador;
         - Ejemplo: `string public mensaje = "Hola";`.  
             
 
-### Tipos compuestos
+### **Tipos compuestos**
 
 - **Arrays**:
     
@@ -83,7 +83,7 @@ uint256 public contador;
 		```  
             
 
-### Tipos especiales
+### **Tipos especiales**
 
 - **Enums**:
     
@@ -120,7 +120,7 @@ uint256 public contador;
 - `private`: Solo accesible dentro del contrato.  
 - `internal`: Accesible dentro del contrato y contratos derivados.
 
-### Notaciones para los nombres
+### **Notaciones para los nombres**
 
 #### 1. Camel Case
 

@@ -1,4 +1,3 @@
-# **¿Qué es blockchain?**
 
 Blockchain es una tecnología de **registro distribuido** que permite almacenar información de forma **segura, transparente e inmutable** sin necesidad de una autoridad central. Se basa en una cadena de bloques que contienen transacciones o datos, y cada bloque está vinculado al anterior mediante criptografía.
 

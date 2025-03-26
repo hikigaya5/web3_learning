@@ -1,4 +1,3 @@
-# **¿Qué es el consenso?**
 
 El consenso es el mecanismo que permite a los participantes de una blockchain ponerse de acuerdo sobre el estado de la red, como qué transacciones son válidas y en qué orden. Sin un intermediario central, este proceso es crucial para mantener la integridad y seguridad de la red. El consenso utilizado en Bitcoin y Ethereum se llama **Nakamoto Consensus** que combina **Proof of Work (PoW)** o **Proof of Stake (PoS)** (dependiendo de la blockchain) y la **Longest Chain Rule**. **PoW** y **PoS** son dos algoritmos de **Chain Selection** para decidir quién propone un nuevo bloque, por tanto tiene la cadena más larga y por lo tanto la cadena correcta. Tanto **PoW** como **PoS** tienen un mecanismo de **Sybil Resistance** lo que los hace resistentes a posibles ataques a la blockchain.
 

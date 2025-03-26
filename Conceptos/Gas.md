@@ -1,4 +1,3 @@
-# **¿Qué es el Gas?**
 
 El **gas** en Ethereum es una unidad de medida que representa el costo computacional necesario para ejecutar operaciones o transacciones en la red de Ethereum. Cada acción en la blockchain de Ethereum, como enviar tokens, ejecutar **smart contracts** o interactuar con aplicaciones descentralizadas (**dApps**), requiere una cierta cantidad de gas.
 

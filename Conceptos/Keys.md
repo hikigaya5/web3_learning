@@ -1,4 +1,3 @@
-# **¿Qué es una key?**
 
 Una key es una cadena de carácteres (String) que en el caso de blockchain sirve para cifrar transacciones. Hay de varios tipos:
 

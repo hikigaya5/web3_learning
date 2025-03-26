@@ -1,4 +1,3 @@
-# **¿Qué es Web3?**
 
 Web3 es un concepto que describe la evolución de Internet hacia una red descentralizada basada en **blockchain** y tecnologías afines. Su objetivo es proporcionar una web más abierta, segura y sin intermediarios, donde los usuarios tienen mayor control sobre sus datos e identidades digitales.
 

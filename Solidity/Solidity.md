@@ -1,4 +1,3 @@
-# **¿Qué es Solidity?**
 
 **Solidity** es un **lenguaje de programación de alto nivel** diseñado específicamente para escribir **smart contracts** en blockchains compatibles con la **Ethereum Virtual Machine (EVM)**, como Ethereum, Polygon, Binance Smart Chain o Avalanche. Su objetivo principal es permitir la creación de **aplicaciones descentralizadas** que ejecutan lógica automatizada y transparente sin intermediarios. Aquí te lo explico de manera sencilla y estructurada.
 
