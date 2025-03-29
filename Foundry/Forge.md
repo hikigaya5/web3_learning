@@ -69,90 +69,199 @@
 	}
 	```
 
-### **[[Estructura de un proyecto]]**
 
-Un proyecto típico de Foundry sigue esta estructura de carpetas y archivos:
+### **Utilidades de línea de comandos**
 
-```Bash
-mi_proyecto/
-├── foundry.toml       # Configuración de Foundry (compilador, remappings, etc.)
-├── lib/               # Dependencias instaladas (ej: OpenZeppelin)
-├── src/               # Contratos inteligentes (.sol)
-├── test/              # Pruebas escritas en Solidity (.t.sol)
-├── script/            # Scripts de despliegue y tareas (.s.sol)
-├── out/               # Artifacts de compilación (generado automáticamente)
-└── cache/
-```
-### **Ejemplo completo**
+#### **1. `forge test`**
 
-1. **Contrato**:
-```Solidity
-// src/Token.sol
-contract Token {
-    mapping(address => uint256) public balanceOf;
+**Propósito**: Ejecutar pruebas unitarias y de integración escritas en Solidity.  
+**Opciones útiles**:
+
+- `-vvv`: Muestra trazas detalladas de transacciones (útil para debugging).
     
-    constructor() {
-        balanceOf[msg.sender] = 1000;
-    }
+- `--match-test <nombre>`: Ejecuta solo pruebas que coincidan con un nombre (ej: `--match-test testTransfer`).
     
-    function transfer(address to, uint256 amount) public {
-        balanceOf[msg.sender] -= amount;
-        balanceOf[to] += amount;
-    }
-}
-```
-
-2. **Prueba**
-
-```Solidity
-// test/Token.t.sol
-import "forge-std/Test.sol";
-import "../src/Token.sol"
-
-contract TokenTest is Test {
-    Token token;
-    address alice = address(1);
+- `--gas-report`: Genera un informe del gas consumido por cada función.
     
-    function setUp() public {
-        token = new Token();
-        token.transfer(alice, 100); // Estado inicial
-    }
+- `--fork-url <URL>`: Ejecuta pruebas en un fork de una red (Mainnet, testnets).
     
-    function testBalanceDeAlice() public {
-        assertEq(token.balanceOf(alice), 100);
-    }
+
+**Ejemplo**:
+
+bash
+
+Copy
+
+forge test -vvv --gas-report --fork-url https://eth-mainnet.g.alchemy.com/v2/TU_KEY
+
+---
+
+#### **2. `forge build`**
+
+**Propósito**: Compila los contratos en la carpeta `src/` y genera los artifacts en `out/`.  
+**Opciones**:
+
+- `--extra-output`: Incluye metadatos adicionales (ABI, storage layout, etc.).
     
-    function testFuzzTransferencia(uint256 amount) public {
-        vm.assume(amount <= 100);
-        vm.prank(alice);
-        token.transfer(address(2), amount);
-        assertEq(token.balanceOf(address(2)), amount);
-    }
-}
-```
+- `--sizes`: Muestra el tamaño de los contratos compilados.
+    
 
-3. **Script de deploy**:
+**Ejemplo**:
 
-```Solidity
-// script/DeployToken.s.sol
-import "forge-std/Script.sol";
-import "../src/Token.sol";
+bash
 
-contract DeployToken is Script {
-    function run() external {
-        vm.startBroadcast(); // Inicia el contexto de transacción
-        Token token = new Token();
-        vm.stopBroadcast();
-        
-        // Opcional: Guardar la dirección del contrato desplegado
-        string memory json = vm.serializeAddress("deployments", "Token", address(token));
-        vm.writeJson(json, "./deployments.json");
-    }
-}
-```
-3. **Resultado de `forge test`**:
+Copy
 
-```Bash
-[PASS] testBalanceDeAlice() (gas: 12345)
-[PASS] testFuzzTransferencia(uint256) (runs: 256, μ: 54321, ~: 56789)
-```
+forge build --extra-output metadata
+
+---
+
+#### **3. `forge script`**
+
+**Propósito**: Ejecutar scripts de despliegue o tareas automatizadas escritos en Solidity.  
+**Opciones clave**:
+
+- `--broadcast`: Envía transacciones reales a la red.
+    
+- `--verify`: Verifica el contrato en Etherscan después del despliegue.
+    
+- `--slow`: Simula transacciones sin enviarlas (`dry-run`).
+    
+
+**Ejemplo**:
+
+bash
+
+Copy
+
+forge script script/Deploy.s.sol:Deploy --rpc-url mainnet --broadcast --verify
+
+---
+
+#### **4. `forge snapshot`**
+
+**Propósito**: Genera o compara **informes de gas** para optimizar costos.  
+**Uso**:
+
+- `forge snapshot`: Crea un archivo `.gas-snapshot` con el consumo actual.
+    
+- `forge snapshot --check`: Compara el gas usado con el último snapshot.
+    
+
+**Ejemplo**:
+
+bash
+
+Copy
+
+forge test --gas-report && forge snapshot
+
+---
+
+#### **5. `forge inspect`**
+
+**Propósito**: Obtener metadatos de los contratos compilados (ABI, bytecode, storage layout).  
+**Sintaxis**:
+
+bash
+
+Copy
+
+forge inspect <NOMBRE_CONTRATO> <PROPIEDAD>
+
+**Ejemplos**:
+
+bash
+
+Copy
+
+forge inspect Token abi         # Muestra el ABI del contrato Token
+forge inspect Token bytecode    # Muestra el bytecode
+
+---
+
+#### **6. `forge create`**
+
+**Propósito**: Desplegar un contrato directamente desde la terminal.  
+**Opciones**:
+
+- `--constructor-args`: Pasar argumentos al constructor.
+    
+- `--value`: Enviar ETH durante el despliegue (si el constructor es `payable`).
+    
+
+**Ejemplo**:
+
+bash
+
+Copy
+
+forge create src/Token.sol:Token --rpc-url mainnet --private-key $PK
+
+---
+
+#### **7. `forge verify-contract`**
+
+**Propósito**: Verificar un contrato en **Etherscan** o **Blockscout**.  
+**Parámetros clave**:
+
+- `--chain`: ID de la red (ej: `1` para Mainnet, `5` para Goerli).
+    
+- `--compiler-version`: Versión de Solidity usada (ej: `v0.8.20`).
+    
+
+**Ejemplo**:
+
+bash
+
+Copy
+
+forge verify-contract 0x... src/Token.sol:Token --chain 1 --etherscan-api-key $API_KEY
+
+---
+
+#### **8. `forge install` / `forge update`**
+
+**Propósito**: Gestionar dependencias (ej: OpenZeppelin, Solmate).
+
+- `forge install <repo>`: Instala una librería (ej: `forge install OpenZeppelin/openzeppelin-contracts`).
+    
+- `forge update`: Actualiza todas las dependencias.
+    
+
+---
+
+#### **9. `forge coverage`**
+
+**Propósito**: Generar un informe de **cobertura de pruebas** (qué líneas de código se ejecutan en las pruebas).  
+**Ejemplo**:
+
+bash
+
+Copy
+
+forge coverage --report lcov  # Genera un informe en formato LCOV
+
+---
+
+#### **10. `forge clean`**
+
+**Propósito**: Eliminar carpetas `out/` y `cache/` para limpiar el proyecto.
+
+bash
+
+Copy
+
+forge clean
+
+---
+
+#### **Bonus: `forge bind`**
+
+**Propósito**: Generar **bindings** en otros lenguajes (Rust, TypeScript) para interactuar con contratos desde fuera de Solidity.
+
+bash
+
+Copy
+
+forge bind --lang ts --out-dir ./frontend/src/types
